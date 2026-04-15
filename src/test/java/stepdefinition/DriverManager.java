@@ -17,12 +17,12 @@ public class DriverManager {
         driver.manage().window().maximize();
     }
 
-    @After
-    public void tearDown() 
-    {
-        if (driver != null) 
-        {
-            driver.quit();
-        }
-    }
+//    @After
+//    public void tearDown() 
+//    {
+//        if (driver != null) 
+//        {
+//            driver.quit();
+//        }
+//    }
 }

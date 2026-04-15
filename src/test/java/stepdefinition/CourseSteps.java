@@ -12,6 +12,7 @@ import java.util.List;
 public class CourseSteps 
 {
     WebDriver driver = DriverManager.driver;
+    
     HomePage home = new HomePage(driver);
     ResultsPage courses = new ResultsPage(driver);
     ContactSalesPage contact = new ContactSalesPage(driver);
@@ -50,10 +51,16 @@ public class CourseSteps
     public void fillForm(DataTable dataTable) 
     {
         List<Map<String, String>> data = dataTable.asMaps(String.class, String.class);
-        String fname = data.get(0).get("firstName");
-        String lname = data.get(0).get("lastName");
-        String email = data.get(0).get("email");
-        contact.fillForm(fname, lname, email);
+        
+        for(Map<String, String> row : data)
+        {
+        	    String fname = row.get("firstName");
+            String lname = row.get("lastName");
+            String email = row.get("email");
+            contact.fillForm(fname, lname, email);
+        	
+        }
+        
     }
 
     @When("submits the form")

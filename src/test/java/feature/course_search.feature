@@ -15,8 +15,8 @@ Feature: Coursera Course Search and Business Form Validation
     
     And fills the contact sales form with:
       | firstName | lastName | email |
-      | Saketh    | Gontu    | saki  |
-      
+      | Saketh    | Gontu    | sakethGontu  |
+      | raj       | sand     | rajesh  |
     And submits the form
     
     Then an email validation error "Must be valid email" should be displayed
