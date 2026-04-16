@@ -1,8 +1,8 @@
 package stepdefinition;
 
 import io.cucumber.java.en.*;
+import utils.DriverFactory;
 import io.cucumber.datatable.DataTable;
-import org.openqa.selenium.WebDriver;
 import Pages.HomePage;
 import Pages.ResultsPage;
 import Pages.ContactSalesPage;
@@ -11,16 +11,14 @@ import java.util.List;
 
 public class CourseSteps 
 {
-    WebDriver driver = DriverManager.driver;
-    
-    HomePage home = new HomePage(driver);
-    ResultsPage courses = new ResultsPage(driver);
-    ContactSalesPage contact = new ContactSalesPage(driver);
+    HomePage home = new HomePage(DriverFactory.getDriver());
+    ResultsPage courses = new ResultsPage(DriverFactory.getDriver());
+    ContactSalesPage contact = new ContactSalesPage(DriverFactory.getDriver());
 
     @Given("the user is on the Coursera homepage")
     public void navigateToHome() 
     {
-        driver.get("https://www.coursera.org/");
+    		DriverFactory.getDriver().get("https://www.coursera.org/");
     }
 
     @When("the user searches for {string}")
@@ -58,9 +56,7 @@ public class CourseSteps
             String lname = row.get("lastName");
             String email = row.get("email");
             contact.fillForm(fname, lname, email);
-        	
         }
-        
     }
 
     @When("submits the form")

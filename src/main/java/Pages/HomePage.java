@@ -12,13 +12,13 @@ public class HomePage
     WebDriver driver;
 
     @FindBy(css = "div[class='css-guxf6x']")
-    WebElement homeButton;
+    private WebElement homeButton;
     
     @FindBy(id = "search-autocomplete-input")
-    WebElement searchInput;
+    private WebElement searchInput;
 
     @FindBy(xpath = "//*[@id=\"rendered-content\"]/div/span/span/div/nav/div[1]/div/div/div/div/div/ul/li[2]/a/span/span")
-    WebElement forBusinessLink;
+    private WebElement forBusinessLink;
 
     public HomePage(WebDriver driver) 
     {
