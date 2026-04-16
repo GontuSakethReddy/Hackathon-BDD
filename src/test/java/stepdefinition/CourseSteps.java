@@ -1,16 +1,21 @@
 package stepdefinition;
 
 import io.cucumber.java.en.*;
+import utils.ConfigReader;
 import utils.DriverFactory;
 import io.cucumber.datatable.DataTable;
 import Pages.HomePage;
 import Pages.ResultsPage;
 import Pages.ContactSalesPage;
 import java.util.Map;
+import java.util.Properties;
 import java.util.List;
 
 public class CourseSteps 
 {
+	ConfigReader cr = new ConfigReader();
+	Properties prop = cr.init_prop();
+	
     HomePage home = new HomePage(DriverFactory.getDriver());
     ResultsPage courses = new ResultsPage(DriverFactory.getDriver());
     ContactSalesPage contact = new ContactSalesPage(DriverFactory.getDriver());
@@ -18,7 +23,8 @@ public class CourseSteps
     @Given("the user is on the Coursera homepage")
     public void navigateToHome() 
     {
-    		DriverFactory.getDriver().get("https://www.coursera.org/");
+    		String url = prop.getProperty("url");
+    		DriverFactory.getDriver().get(url);
     }
 
     @When("the user searches for {string}")

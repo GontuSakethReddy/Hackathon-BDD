@@ -1,25 +1,20 @@
-//package utilt;
-//
-//import java.io.FileInputStream;
-//import java.io.IOException;
-//import java.util.Properties;
-//
-//import org.openqa.selenium.WebDriver;
-//
-//public class ConfigReader  
-//{
-//	
-//	try 
-//	{
-//		Properties prop = new Properties();
-//		FileInputStream fs = new FileInputStream(System.getProperty("user.dir")+"/src/test/resources/config.properties");
-//		prop.load(fs);
-//	}
-//	catch(IOException e)
-//	{
-//		e.printStackTrace();
-//	}
-//}
 package utils;
 
+import java.io.FileInputStream;
+import java.util.Properties;
 
+public class ConfigReader {
+    private Properties prop;
+
+    public Properties init_prop() {
+        prop = new Properties();
+        try {
+            // Path to your properties file
+            FileInputStream ip = new FileInputStream("./src/test/resources/config.properties");
+            prop.load(ip);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return prop;
+    }
+}
