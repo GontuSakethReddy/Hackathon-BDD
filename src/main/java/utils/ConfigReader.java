@@ -12,7 +12,9 @@ public class ConfigReader {
             // Path to your properties file
             FileInputStream ip = new FileInputStream("./src/test/resources/config.properties");
             prop.load(ip);
-        } catch (Exception e) {
+        } 
+        catch (Exception e)
+        {
             e.printStackTrace();
         }
         return prop;
