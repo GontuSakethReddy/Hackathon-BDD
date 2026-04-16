@@ -16,16 +16,16 @@ public class ContactSalesPage
     WebDriverWait wait;
 
     @FindBy(css = "div.css-9rsjro")
-    WebElement contactSalesBtn;
+    private WebElement contactSalesBtn;
 
     @FindBy(id = "FirstName")
-    WebElement firstName;
+    private WebElement firstName;
 
     @FindBy(id = "LastName")
-    WebElement lastName;
+    private WebElement lastName;
 
     @FindBy(id = "Email")
-    WebElement email;
+    private WebElement email;
 
     @FindBy(css = "button[type='submit']")
     WebElement submitBtn;

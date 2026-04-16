@@ -18,16 +18,16 @@ public class ResultsPage
     WebDriver driver;
 
     @FindBy(css = "button[data-testid='filter-dropdown-productDifficultyLevel']")
-    WebElement levelDropDown;
+    private WebElement levelDropDown;
 
     @FindBy(xpath = "//span[text()='Beginner']")
-    WebElement beginnerOption;
+    private WebElement beginnerOption;
 
     @FindBy(css = "button[data-testid='filter-dropdown-language']")
-    WebElement langDropDown;
+    private WebElement langDropDown;
 
     @FindBy(xpath = "//span[text()='English']")
-    WebElement englishOption;
+    private WebElement englishOption;
 
     @FindBy(css = "button.cds-button-primary")
     List<WebElement> applyButtons; 
