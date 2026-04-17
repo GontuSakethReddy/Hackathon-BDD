@@ -8,7 +8,6 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 public class DriverFactory {
     private static WebDriver driver;
 
-    // Modified to accept browser name
     public static WebDriver initDriver(String browser) 
     {
     	if (driver == null) 
@@ -35,6 +34,7 @@ public class DriverFactory {
         return driver;
     	
     }
+    
     public static WebDriver getDriver() 
     {
         return driver;

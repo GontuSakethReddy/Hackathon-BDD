@@ -1,15 +1,8 @@
 <suite name="Suite">
-  <test name="Test_Chrome">
-    <parameter name="browser" value="chrome"/>
+  <test name="Test">
     <classes>
       <class name="runner.TestRunner"/>
     </classes>
   </test>
-
-  <test name="Test_Edge">
-    <parameter name="browser" value="edge"/>
-    <classes>
-      <class name="runner.TestRunner"/>
-    </classes>
-  </test>
+  
 </suite>
