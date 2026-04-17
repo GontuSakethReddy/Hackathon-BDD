@@ -1,5 +1,14 @@
-<suite name="Suite">
-  <test name="Test">
+<suite name="Suite" >
+
+  <test name="EdgeTests">
+    <parameter name="browser" value="edge" />
+    <classes>
+      <class name="runner.TestRunner"/>
+    </classes>
+  </test>
+
+  <test name="ChromeTests">
+    <parameter name="browser" value="chrome" />
     <classes>
       <class name="runner.TestRunner"/>
     </classes>

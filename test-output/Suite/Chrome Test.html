@@ -1,6 +1,6 @@
 <html>
 <head>
-<title>TestNG:  Test</title>
+<title>TestNG:  Chrome Test</title>
 <link href="../testng.css" rel="stylesheet" type="text/css" />
 <link href="../my-testng.css" rel="stylesheet" type="text/css" />
 
@@ -53,13 +53,13 @@ function toggleAllBoxes() {
 
 </head>
 <body>
-<h2 align='center'>Test</h2><table border='1' align="center">
+<h2 align='center'>Chrome Test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>2/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>0/2/0</td>
 </tr><tr>
-<td>Started on:</td><td>Fri Apr 17 08:38:34 IST 2026</td>
+<td>Started on:</td><td>Fri Apr 17 08:35:28 IST 2026</td>
 </tr>
-<tr><td>Total time:</td><td>68 seconds (68569 ms)</td>
+<tr><td>Total time:</td><td>0 seconds (854 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,8 +67,8 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
-<table width='100%' border='1' class='invocation-passed'>
-<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
 <td><b>Attribute(s)</b></td>
 <td width="30%"><b>Exception</b></td>
@@ -77,14 +77,28 @@ function toggleAllBoxes() {
 </tr>
 <tr>
 <td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Search for web development courses", "Coursera Course Search and Business Form Validation"</td>
-<td></td>
-<td>24</td>
-<td>runner.TestRunner@6200f9cb</td></tr>
+<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;String.equalsIgnoreCase(String)&quot; because &quot;browser&quot; is null
+	at utils.DriverFactory.initDriver(DriverFactory.java:14)
+	at stepdefinition.Hooks.setup(Hooks.java:13)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1163214068", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1163214068'><pre>java.lang.NullPointerException: Cannot invoke &quot;String.equalsIgnoreCase(String)&quot; because &quot;browser&quot; is null
+	at utils.DriverFactory.initDriver(DriverFactory.java:14)
+	at stepdefinition.Hooks.setup(Hooks.java:13)
+</pre></div></td>
+<td>0</td>
+<td>runner.TestRunner@6aaceffd</td></tr>
 <tr>
 <td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate business form errors", "Coursera Course Search and Business Form Validation"</td>
-<td></td>
-<td>43</td>
-<td>runner.TestRunner@6200f9cb</td></tr>
+<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;String.equalsIgnoreCase(String)&quot; because &quot;browser&quot; is null
+	at utils.DriverFactory.initDriver(DriverFactory.java:14)
+	at stepdefinition.Hooks.setup(Hooks.java:13)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1400174376", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1400174376'><pre>java.lang.NullPointerException: Cannot invoke &quot;String.equalsIgnoreCase(String)&quot; because &quot;browser&quot; is null
+	at utils.DriverFactory.initDriver(DriverFactory.java:14)
+	at stepdefinition.Hooks.setup(Hooks.java:13)
+</pre></div></td>
+<td>0</td>
+<td>runner.TestRunner@6aaceffd</td></tr>
 </table><p>
 </body>
 </html>

@@ -5,7 +5,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
-public class DriverFactory {
+public class DriverFactory 
+{
     private static WebDriver driver;
 
     public static WebDriver initDriver(String browser) 
@@ -40,7 +41,8 @@ public class DriverFactory {
         return driver;
     }
 
-    public static void quitDriver() {
+    public static void quitDriver() 
+    {
         if (driver != null) {
             driver.quit();
             driver = null;

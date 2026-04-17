@@ -1,17 +1,24 @@
 package stepdefinition;
 
 import io.cucumber.java.Before;
-import utils.DriverFactory;
 import io.cucumber.java.After;
+import utils.DriverFactory;
+import runner.TestRunner; 
 
 public class Hooks 
 {
+
     @Before
     public void setup() 
     {
-    		String browerName = "Chrome";
-    		DriverFactory.initDriver(browerName);
-        DriverFactory.getDriver().manage().window().maximize();
+        String browser = TestRunner.browserName;
+        
+        if (browser == null) 
+        {
+            browser = "chrome";
+        }
+        
+        DriverFactory.initDriver(browser);
     }
 
     @After
@@ -19,5 +26,4 @@ public class Hooks
     {
         DriverFactory.quitDriver();
     }
-
 }
