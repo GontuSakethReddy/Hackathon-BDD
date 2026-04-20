@@ -7,7 +7,6 @@ import runner.TestRunner;
 
 public class Hooks 
 {
-
     @Before
     public void setup() 
     {

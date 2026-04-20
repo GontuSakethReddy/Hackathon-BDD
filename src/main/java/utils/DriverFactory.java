@@ -11,6 +11,7 @@ public class DriverFactory
 
     public static WebDriver initDriver(String browser) 
     {
+    	System.out.println("Running on browser: " + browser);
     	if (driver == null) 
         {
             switch (browser.toLowerCase()) 

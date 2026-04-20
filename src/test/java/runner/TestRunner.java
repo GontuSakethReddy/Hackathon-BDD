@@ -9,12 +9,10 @@ import io.cucumber.testng.CucumberOptions;
     features = "src/test/java/feature",
     glue = {"stepdefinition"},
     plugin = {"pretty", "html:target/cucumber-reports.html"},
-    monochrome = true,
-    tags = "@Smoke and @Regression"
+    monochrome = true
 )
 public class TestRunner extends AbstractTestNGCucumberTests 
 {
-    
     public static String browserName;
 
     @BeforeClass
