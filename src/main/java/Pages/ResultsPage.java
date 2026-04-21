@@ -44,7 +44,8 @@ public class ResultsPage
 
     public void filterBeginnerEnglish() throws InterruptedException 
     {
-    	WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
+    		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
+    		    		
         JavascriptExecutor js = (JavascriptExecutor) driver;
 
         // Filter Level: Beginner
@@ -63,6 +64,11 @@ public class ResultsPage
 
 	public void getAndPrintTopCourses(Integer count) 
 	{
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+	    
+	    // WAIT for at least one card to be present before finding the list
+	    wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.cssSelector("li.cds-grid-item")));
+	    
 		List<WebElement> allCourses = driver.findElements(By.cssSelector("li.cds-grid-item"));
 
 	    for (int i = 0; i < Math.min(count, allCourses.size()); i++) 

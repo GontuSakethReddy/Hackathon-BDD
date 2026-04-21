@@ -9,6 +9,9 @@ import Pages.ResultsPage;
 import Pages.ContactSalesPage;
 import java.util.Map;
 import java.util.Properties;
+
+import org.testng.Assert;
+
 import java.util.List;
 
 public class CourseSteps 
@@ -44,6 +47,7 @@ public class CourseSteps
     public void the_system_should_display_the_top_course_details(Integer count) 
     {
     	    courses.getAndPrintTopCourses(count);
+    	    
         System.out.println("Extraction of top " + count + " courses completed.");
     }
 
@@ -78,10 +82,7 @@ public class CourseSteps
     {
         String actualError = contact.getEmailErrorMessage();
         
-        if (!actualError.contains(expectedPart)) 
-        {
-            throw new AssertionError("Expected error to contain: " + expectedPart + " but got: " + actualError);
-        }
+        Assert.assertTrue(actualError.contains(expectedPart),"Error message mismatch!");
 
         System.out.println("Validation Error Verified: " + actualError);
     }
