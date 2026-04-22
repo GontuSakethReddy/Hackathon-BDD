@@ -8,7 +8,7 @@
         <methods>
           <include name="setUpClass"/>
           <include name="tearDownClass"/>
-          <include name="runScenario" invocation-numbers="0"/>
+          <include name="runScenario" invocation-numbers="0 1"/>
           <include name="defineBrowser"/>
         </methods>
       </class> <!-- runner.TestRunner -->
@@ -21,7 +21,7 @@
         <methods>
           <include name="setUpClass"/>
           <include name="tearDownClass"/>
-          <include name="runScenario" invocation-numbers="0"/>
+          <include name="runScenario" invocation-numbers="0 1"/>
           <include name="defineBrowser"/>
         </methods>
       </class> <!-- runner.TestRunner -->

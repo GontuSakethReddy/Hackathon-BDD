@@ -21,6 +21,7 @@ public class CourseSteps
     Properties prop = cr.init_prop();
     
     HomePage home = new HomePage(DriverFactory.getDriver());
+    
     ResultsPage courses = new ResultsPage(DriverFactory.getDriver());
     ContactSalesPage contact = new ContactSalesPage(DriverFactory.getDriver());
 
@@ -44,7 +45,7 @@ public class CourseSteps
     }
 
     @Then("the system should display the top {int} course details")
-    public void the_system_should_display_the_top_course_details(Integer count) 
+    public void the_system_should_display_the_top_course_details(Integer count) throws InterruptedException 
     {
     	    courses.getAndPrintTopCourses(count);
     	    

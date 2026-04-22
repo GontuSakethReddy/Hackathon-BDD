@@ -62,7 +62,7 @@ public class ResultsPage
 		}
     
 
-	public void getAndPrintTopCourses(Integer count) 
+	public void getAndPrintTopCourses(Integer count) throws InterruptedException 
 	{
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 	    
@@ -77,15 +77,18 @@ public class ResultsPage
 	        try 
 	        {
 	            String title = course.findElement(By.cssSelector("h3.cds-CommonCard-title")).getText();
-	            String rating = course.findElement(By.cssSelector("div.cds-RatingStat-meter span.css-4s48ix")).getText();
+	            Thread.sleep(3000);
+	            //String rating = course.findElement(By.cssSelector("div.cds-RatingStat-meter span.css-4s48ix")).getText();
 	            String details = course.findElement(By.className("cds-CommonCard-metadata")).getText();
 
 	            System.out.println("COURSE #" + (i + 1));
 	            System.out.println("Title:   " + title);
-	            System.out.println("Rating:  " + rating);
+	            //System.out.println("Rating:  " + rating);
 	            System.out.println("Details: " + details);
 	            System.out.println("--------------------------------------");
-	        } catch (NoSuchElementException e) {
+	        } 
+	        catch (NoSuchElementException e) 
+	        {
 	            System.out.println("Could not extract data for course index: " + i);
 	        }
 	    }

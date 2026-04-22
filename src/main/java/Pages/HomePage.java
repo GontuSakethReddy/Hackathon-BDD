@@ -21,7 +21,7 @@ public class HomePage
     @FindBy(id = "search-autocomplete-input")
     private WebElement searchInput;
 
-    @FindBy(xpath = "//*[@id=\"rendered-content\"]/div/span/span/div/nav/div[1]/div/div/div/div/div/ul/li[2]/a/span/span")
+    @FindBy(linkText = "For Businesses")
     private WebElement forBusinessLink;
 
     WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));

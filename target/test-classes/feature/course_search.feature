@@ -4,7 +4,7 @@ Feature: Coursera Course Search and Business Form Validation
     Given the user is on the Coursera homepage
 
   
-  Scenario: Search for web development courses
+  Scenario Outline: Search for web development courses
     When the user searches for "web development"
     And the user filters by Beginner level and English language
     Then the system should display the top 2 course details
